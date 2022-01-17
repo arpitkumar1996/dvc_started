@@ -1,16 +1,11 @@
 {% extends 'base.html' %}
-
 {% block title %}
 WineQuality
 {% endblock title %}
-
-
 {% block custom_css %}
 <!-- Custom CSS -->
 <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 {% endblock custom_css %}
-
-
 {% block body %}
 <!-- nav bar -->
 
@@ -54,6 +49,7 @@ WineQuality
                                 placeholder="alcohol expected range 8.4 to 14.9"></textarea>
 
                         </div>
+
                         <!-- Select output language here. -->
                         <div class="form-group">
                         </div>
@@ -66,11 +62,9 @@ WineQuality
                     <form>
                         <div class="form-group">
                             <label for="translation-result">
-
                                 <blockquote class="blockquote">
                                     <p class="mb-2">Prediction:</p>
                                 </blockquote>
-
                             </label>
                             <textarea readonly class="form-control" id="exTextarea" rows="5">{{ response }}</textarea>
                         </div>
@@ -78,9 +72,7 @@ WineQuality
                 </div>
             </div>
         </div>
-
         {% endblock body %}
-
         {% block custom_js %}
         <!-- Custom JS -->
         <script src="{{ url_for('static', filename='script/index.js') }}"></script>
